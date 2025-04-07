@@ -3,6 +3,7 @@
 <head>
     <meta name="description" content="Creating a responsive webpage">
     <meta name="author" content="Developer Cynthia">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta tag added -->
     <title>My First Responsive Webpage</title>
     <style>
         /* Reset default browser styles */
@@ -75,8 +76,35 @@
             text-decoration: none;
         }
 
-        /* Media Queries for responsiveness */
-        @media (max-width: 768px) {
+        /* Media Queries for larger screens like tablets and desktops */
+        @media (min-width: 768px) {
+            nav ul {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            main {
+                flex-direction: row;
+                padding: 40px;
+            }
+
+            section {
+                margin: 20px;
+            }
+
+            header {
+                font-size: 24px;
+                padding: 30px;
+            }
+
+            footer {
+                font-size: 16px;
+                padding: 20px;
+            }
+        }
+
+        /* Media Queries for smaller screens up to 768px */
+        @media (max-width: 767px) {
             nav ul {
                 flex-direction: column;
                 align-items: center;
@@ -89,16 +117,10 @@
             section {
                 margin: 10px 0;
             }
-        }
 
-        @media (max-width: 480px) {
             header {
                 font-size: 18px;
-                padding: 10px;
-            }
-
-            nav ul li {
-                margin: 10px 0;
+                padding: 15px;
             }
 
             footer {
@@ -110,6 +132,7 @@
                 padding: 10px;
             }
         }
+
     </style>
 </head>
 <body>
@@ -155,3 +178,4 @@
 
 </body>
 </html>
+
